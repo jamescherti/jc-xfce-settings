@@ -93,3 +93,119 @@ xfconf-query --create -c 'xsettings' \
 #-------------------------------------------------------------------------------
 xfconf-query --create -c 'thunar' \
   -p '/misc-thumbnail-mode' --type 'string' --set 'THUNAR_THUMBNAIL_MODE_ALWAYS'
+
+#-------------------------------------------------------------------------------
+# XFWM 4
+#-------------------------------------------------------------------------------
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/box_move' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/box_resize' --type 'bool' --set 'true'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/activate_action' --type 'string' --set 'switch'
+
+# Hide frame of windows when maximized
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/borderless_maximize' --type 'bool' --set 'true'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_minimum' --type 'bool' --set 'true'
+
+# Cycle windows using icons
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_tabwin_mode' --type 'int' --set '0'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/frame_opacity' --type 'int' --set '100'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/inactive_opacity' --type 'int' --set '100'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/move_opacity' --type 'int' --set '100'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/placement_mode' --type 'string' --set 'mouse'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/popup_opacity' --type 'int' --set '100'
+
+# Keep it false because the Application Finder cannot steal focus
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/prevent_focus_stealing' --type 'bool' --set 'false'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/raise_with_any_button' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/resize_opacity' --type 'int' --set '100'
+
+# Use the mouse wheel on the desktop to switch workspaces
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/scroll_workspaces' --type 'bool' --set 'false'
+
+# Window snapping to other windows
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/snap_to_windows' --type 'bool' --set 'true'
+
+# Hide title of windows when maximized
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/titleless_maximize' --type 'bool' --set 'true'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/wrap_cycle' --type 'bool' --set 'false'
+
+# Wrap workspaces when the first of the last workspace is reached
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/wrap_cycle' --type 'bool' --set 'false'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/wrap_layout' --type 'bool' --set 'false'
+
+# Do not wrap workspaces when reaching the screen edge when dragging a Window
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/wrap_windows' --type 'bool' --set 'false'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/use_compositing' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/frame_opacity' --type 'int' --set '0'
+
+# Display full screen overlay windows directly
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/unredirect_overlays' --type 'bool' --set 'true'
+
+# Show windows preview in place of icons when cycling
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_preview' --type 'bool' --set 'false'
+
+# Show shadows under popup windows
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/show_popup_shadow' --type 'bool' --set 'false'
+
+# Show shadows under regular windows
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/show_frame_shadow' --type 'bool' --set 'false'
+
+# Show shadows under dock windows
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/show_dock_shadow' --type 'bool' --set 'false'
+
+# Zoom pointer along with the desktop
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/zoom_pointer' --type 'bool' --set 'false'
+
+# Zoom desktop with mouse wheel
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/zoom_desktop' --type 'bool' --set 'false'
+
+# Minimum size to trigger smart placement
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/placement_ratio' --type 'int' --set '100'
+
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_hidden' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_draw_frame' --type 'bool' --set 'true'
+
+# xfconf-query --create -c 'xfwm4' -p '/general/theme' --type 'string' --set 'Default'
+# xfconf-query --create -c 'xsettings' -p '/Gtk/DecorationLayout' --type 'string' --set 'close:'
+# xfconf-query --create -c 'xfwm4' -p '/general/button_layout' --type 'string' --set 'C|'
+# xfconf-query --create -c 'xfwm4' -p '/general/placement_ratio' --type 'int' --set '15'
+# xfconf-query --create -c 'xfwm4' \
+#   -p '/general/cycle_tabwin_mode' --type 'int' --set '1' # cycle Windows in a list
