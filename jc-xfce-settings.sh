@@ -124,10 +124,44 @@ xfconf-query --create -c 'xfce4-notifyd' \
   -p '/expire-timeout' --type 'int' --set '5'
 xfconf-query --create -c 'xfce4-notifyd' \
   -p '/notify-location' --type 'uint' --set '3' # 3=bottom right
+
 # xfconf-query --create -c 'xfce4-notifyd' \
 #   -p '/applications/muted_applications' --type 'string' --set 'Power Manager'
 # xfconf-query --create -c 'xfce4-notifyd' \
 #  -p '/notify-location' --type 'uint' --set '1'  # 1=bottom left
+
+#-------------------------------------------------------------------------------
+# xfce4-desktop
+#-------------------------------------------------------------------------------
+# 0=no_icons 1=minimized_apps_icons 2=file_launcher_icons
+xfconf-query --create -c 'xfce4-desktop' \
+  -p '/desktop-icons/style' --type 'int' --set '0'
+
+# Window list menu
+xfconf-query --create -c 'xfce4-desktop' \
+  -p '/windowlist-menu/show' --type 'bool' --set 'false'
+
+# Desktop menu
+xfconf-query --create -c 'xfce4-desktop' \
+  -p '/desktop-menu/show' --type 'bool' --set 'false'
+
+xfconf-query --create -c 'xfce4-desktop' \
+  -p '/desktop-icons/show-tooltips' --type 'bool' --set 'false'
+
+#-------------------------------------------------------------------------------
+# Displays
+#-------------------------------------------------------------------------------
+# Configure new displays when connected
+xfconf-query --create -c 'displays' \
+  -p '/Notify' --type 'bool' --set 'true'
+
+#-------------------------------------------------------------------------------
+# Session
+#-------------------------------------------------------------------------------
+xfconf-query --create -c 'xfce4-session' \
+  -p '/general/SaveOnExit' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfce4-session' \
+  -p '/general/AutoSave' --type 'bool' --set 'false' # auto save session
 
 #-------------------------------------------------------------------------------
 # XFWM 4
@@ -244,3 +278,5 @@ xfconf-query --create -c 'xfwm4' \
 # xfconf-query --create -c 'xfwm4' -p '/general/placement_ratio' --type 'int' --set '15'
 # xfconf-query --create -c 'xfwm4' \
 #   -p '/general/cycle_tabwin_mode' --type 'int' --set '1' # cycle Windows in a list
+
+echo "Success."
