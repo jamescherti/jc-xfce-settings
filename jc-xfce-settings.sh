@@ -52,6 +52,18 @@ if ! which xfconf-query >/dev/null 2>&1; then
 fi
 
 #-------------------------------------------------------------------------------
+# Title bar
+#-------------------------------------------------------------------------------
+xfconf-query --create -c 'xsettings' \
+  -p '/Gtk/DecorationLayout' --type 'string' --set ':minimize,close'
+xfconf-query --create -c 'xfwm4' \
+  -p '/general/button_layout' --type 'string' --set '|HC'
+
+# Windows buttons (O=options H=minimize M=maximize C=close)
+# xfconf-query --create -c 'xfwm4' \
+#   -p '/general/button_layout' --type 'string' --set 'O|HMC'
+
+#-------------------------------------------------------------------------------
 # xsettings
 #-------------------------------------------------------------------------------
 xfconf-query --create -c 'xsettings' -p '/Xft/Antialias' --type 'int' --set '1'
@@ -69,8 +81,12 @@ xfconf-query --create -c 'xsettings' \
 
 xfconf-query --create -c 'xsettings' \
   -p '/Gtk/CursorThemeSize' --type 'string' --set '32'
-# xfconf-query --create -c 'xsettings' -p '/Net/ThemeName' --type 'string' --set 'Adwaita-dark'
-# xfconf-query --create -c 'xsettings' -p '/Net/IconThemeName' --type 'string' --set 'Adwaita'
+
+# xfconf-query --create -c 'xsettings' \
+#   -p '/Net/ThemeName' --type 'string' --set 'Adwaita-dark'
+
+# xfconf-query --create -c 'xsettings' \
+#   -p '/Net/IconThemeName' --type 'string' --set 'Adwaita'
 
 #-------------------------------------------------------------------------------
 # Thunar
