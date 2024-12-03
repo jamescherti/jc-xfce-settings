@@ -52,4 +52,4 @@ The **jc-xfce-settings** repository provides the `jc-xfce-settings.sh` script, w
 
 ## Links
 
-- [jc-xfce-settings](https://github.com/jamescherti/jc-xfce-settings)
+- [jc-xfce-settings @GitHub](https://github.com/jamescherti/jc-xfce-settings)
