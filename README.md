@@ -62,4 +62,4 @@ The `watch-xfce-xfconf` tool has been written by [James Cherti](https://www.jame
 - [jc-xfce-settings @GitHub](https://github.com/jamescherti/jc-xfce-settings)
 
 Other related project by the same author:
-- [watch-xfce-xfconf @GitHub](https://github.com/jamescherti/watch-xfce-xfconf/): Configure XFCE 4 programmatically using the `xfconf-query` commands displayed by *watch-xfce-xfconf* when XFCE 4 settings are modified.
+- [watch-xfce-xfconf](https://github.com/jamescherti/watch-xfce-xfconf/): Configure XFCE 4 programmatically using the `xfconf-query` commands displayed by *watch-xfce-xfconf* when XFCE 4 settings are modified.
