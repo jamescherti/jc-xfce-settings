@@ -11,6 +11,7 @@ This project provides the `jc-xfce-settings.sh` script, which holds James Cherti
   - [Requirements](#requirements)
   - [Usage](#usage)
   - [Features](#features)
+  - [Author and License](#author-and-license)
   - [Links](#links)
 
 <!-- markdown-toc end -->
@@ -52,6 +53,13 @@ This project provides the `jc-xfce-settings.sh` script, which holds James Cherti
 - **Window Management:** Configures snapping, shadow effects, focus behavior, and workspace interactions.
 - **Compositor Settings:** Adjusts transparency and disables unneeded effects.
 
+## Author and License
+
+The `watch-xfce-xfconf` tool has been written by [James Cherti](https://www.jamescherti.com/) and is distributed under terms of the MIT license.
+
 ## Links
 
 - [jc-xfce-settings @GitHub](https://github.com/jamescherti/jc-xfce-settings)
+
+Other related project by the same author:
+- [watch-xfce-xfconf @PyPI](https://pypi.org/project/watch-xfce-xfconf/): Configure XFCE 4 programmatically by displaying the xfconf-query commands that correspond to any change made in XFCE 4 / Xfconf settings.
