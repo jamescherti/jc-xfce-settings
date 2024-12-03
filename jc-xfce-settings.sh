@@ -92,7 +92,42 @@ xfconf-query --create -c 'xsettings' \
 # Thunar
 #-------------------------------------------------------------------------------
 xfconf-query --create -c 'thunar' \
-  -p '/misc-thumbnail-mode' --type 'string' --set 'THUNAR_THUMBNAIL_MODE_ALWAYS'
+  -p '/misc-thumbnail-mode' --type 'string' \
+  --set 'THUNAR_THUMBNAIL_MODE_ALWAYS'
+xfconf-query --create -c 'thunar' \
+  -p '/misc-directory-specific-settings' --type 'bool' --set 'true'
+xfconf-query --create -c 'thunar' \
+  -p '/misc-single-click' --type 'bool' --set 'true'
+xfconf-query --create -c 'thunar' \
+  -p '/misc-thumbnail-mode' --type 'string' \
+  --set 'THUNAR_THUMBNAIL_MODE_ONLY_LOCAL'
+
+#-------------------------------------------------------------------------------
+# Keyboard
+#-------------------------------------------------------------------------------
+# The time, in milliseconds, before a pressed key begins repeating
+xfconf-query --create -c 'keyboards' \
+  -p '/Default/KeyRepeat/Delay' --type 'int' --set '290'
+
+# The rate at which keystrokes are generated while a key is pressed
+xfconf-query --create -c 'keyboards' \
+  -p '/Default/KeyRepeat/Rate' --type 'int' --set '120'
+xfconf-query --create -c 'keyboards' \
+  -p '/Default/KeyRepeat' --type 'bool' --set 'true'
+
+#-------------------------------------------------------------------------------
+# Notifications
+#-------------------------------------------------------------------------------
+xfconf-query --create -c 'xfce4-notifyd' \
+  -p '/theme' --type 'string' --set 'Bright'
+xfconf-query --create -c 'xfce4-notifyd' \
+  -p '/expire-timeout' --type 'int' --set '5'
+xfconf-query --create -c 'xfce4-notifyd' \
+  -p '/notify-location' --type 'uint' --set '3' # 3=bottom right
+# xfconf-query --create -c 'xfce4-notifyd' \
+#   -p '/applications/muted_applications' --type 'string' --set 'Power Manager'
+# xfconf-query --create -c 'xfce4-notifyd' \
+#  -p '/notify-location' --type 'uint' --set '1'  # 1=bottom left
 
 #-------------------------------------------------------------------------------
 # XFWM 4
