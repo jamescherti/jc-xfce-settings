@@ -2,6 +2,8 @@
 
 This project provides the `jc-xfce-settings.sh` script, which holds James Cherti's settings to customize the XFCE desktop environment, including window management, notifications, desktop behavior, keyboard settings, and more, to enhance the user experience.
 
+(The jc-xfce-settings.sh script was created with the help of [watch-xfce-xfconf](https://github.com/jamescherti/watch-xfce-xfconf))
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 ## Table of Contents
 
