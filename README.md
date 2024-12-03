@@ -1,6 +1,6 @@
 # jc-xfce-settings - JC's XFCE Settings
 
-The **jc-xfce-settings** repository provides the `jc-xfce-settings.sh` script, which allows configuration of the XFCE desktop environment. This script customizes various aspects of the system, including window management, notifications, desktop behavior, keyboard settings, and more to enhance the user experience.
+This project provides the `jc-xfce-settings.sh` script, which holds James Cherti's settings to customize the XFCE desktop environment, including window management, notifications, desktop behavior, keyboard settings, and more, to enhance the user experience.
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 ## Table of Contents
@@ -22,19 +22,19 @@ The **jc-xfce-settings** repository provides the `jc-xfce-settings.sh` script, w
 
 1. Clone the repository:
 
-   ```bash
+   ```
    git clone https://github.com/jamescherti/jc-xfce-settings
    ```
 
 2. Navigate to the repository directory:
 
-   ```bash
+   ```
    cd jc-xfce-settings
    ```
 
 3. Run the script to configure XFCE:
 
-   ```bash
+   ```
    ./jc-xfce-settings.sh
    ```
 
