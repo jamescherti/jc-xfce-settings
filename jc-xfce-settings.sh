@@ -167,6 +167,8 @@ xfconf-query --create -c 'xfce4-session' \
 # XFWM 4
 #-------------------------------------------------------------------------------
 xfconf-query --create -c 'xfwm4' \
+  -p '/general/cycle_workspaces' --type 'bool' --set 'false'
+xfconf-query --create -c 'xfwm4' \
   -p '/general/box_move' --type 'bool' --set 'false'
 xfconf-query --create -c 'xfwm4' \
   -p '/general/box_resize' --type 'bool' --set 'true'
