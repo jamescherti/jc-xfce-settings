@@ -64,3 +64,4 @@ The `jc-xfce-settings` tool has been written by [James Cherti](https://www.james
 
 Other related project by the same author:
 - [watch-xfce-xfconf](https://github.com/jamescherti/watch-xfce-xfconf/): Configure XFCE 4 programmatically using the `xfconf-query` commands displayed by *watch-xfce-xfconf* when XFCE 4 settings are modified.
+- [jc-gnome-settings @GitHub](https://github.com/jamescherti/jc-gnome-settings): This project provides the `jc-gnome-settings.sh` script, which holds James Cherti's settings to customize the GNOME desktop environment, including window management, notifications, desktop behavior, keyboard settings, and more, to enhance the user experience.
