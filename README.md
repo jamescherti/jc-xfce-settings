@@ -56,7 +56,7 @@ This project provides the `jc-xfce-settings.sh` script, which holds James Cherti
 
 ## Author and License
 
-The `watch-xfce-xfconf` tool has been written by [James Cherti](https://www.jamescherti.com/) and is distributed under terms of the MIT license.
+The `jc-xfce-settings` tool has been written by [James Cherti](https://www.jamescherti.com/) and is distributed under terms of the MIT license.
 
 ## Links
 
