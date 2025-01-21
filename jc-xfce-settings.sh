@@ -6,7 +6,7 @@
 # This file was created with the help of watch-xfce-xfconf:
 # https://github.com/jamescherti/watch-xfce-xfconf/
 #
-# Copyright (C) 2021-2024 James Cherti
+# Copyright (C) 2021-2025 James Cherti
 #
 # Distributed under terms of the MIT license.
 #
