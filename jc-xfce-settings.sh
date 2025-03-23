@@ -232,10 +232,10 @@ xfconf-query --create -c 'xfwm4' \
 xfconf-query --create -c 'xfwm4' \
   -p '/general/wrap_windows' --type 'bool' --set 'false'
 
-xfconf-query --create -c 'xfwm4' \
-  -p '/general/use_compositing' --type 'bool' --set 'false'
-xfconf-query --create -c 'xfwm4' \
-  -p '/general/frame_opacity' --type 'int' --set '0'
+# xfconf-query --create -c 'xfwm4' \
+#   -p '/general/use_compositing' --type 'bool' --set 'false'
+# xfconf-query --create -c 'xfwm4' \
+#   -p '/general/frame_opacity' --type 'int' --set '0'
 
 # Display full screen overlay windows directly
 xfconf-query --create -c 'xfwm4' \
