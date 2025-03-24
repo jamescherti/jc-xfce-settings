@@ -73,7 +73,7 @@ xfconf-query --create -c 'xsettings' -p '/Xft/Hinting' --type 'int' --set '1'
 
 # hintnone, hintslight, hintmedium, hintfull
 xfconf-query --create -c 'xsettings' \
-  -p '/Xft/HintStyle' --type 'string' --set 'hintslight'
+  -p '/Xft/HintStyle' --type 'string' --set 'hintfull'
 
 # none, rgb, bgr, vrgb, vbgr
 xfconf-query --create -c 'xsettings' \
