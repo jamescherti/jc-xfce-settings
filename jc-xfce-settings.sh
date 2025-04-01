@@ -270,7 +270,7 @@ xfconf-query --create -c 'xfwm4' \
   -p '/general/placement_ratio' --type 'int' --set '100'
 
 xfconf-query --create -c 'xfwm4' \
-  -p '/general/cycle_hidden' --type 'bool' --set 'false'
+  -p '/general/cycle_hidden' --type 'bool' --set 'true'
 xfconf-query --create -c 'xfwm4' \
   -p '/general/cycle_draw_frame' --type 'bool' --set 'true'
 
