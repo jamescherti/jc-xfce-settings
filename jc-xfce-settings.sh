@@ -115,11 +115,6 @@ xfconf-query --create -c 'xfce4-notifyd' \
 xfconf-query --create -c 'xfce4-notifyd' \
   -p '/notify-location' --type 'uint' --set '3' # 3=bottom right
 
-# xfconf-query --create -c 'xfce4-notifyd' \
-#   -p '/applications/muted_applications' --type 'string' --set 'Power Manager'
-# xfconf-query --create -c 'xfce4-notifyd' \
-#  -p '/notify-location' --type 'uint' --set '1'  # 1=bottom left
-
 #-------------------------------------------------------------------------------
 # xfce4-desktop
 #-------------------------------------------------------------------------------
@@ -152,6 +147,91 @@ xfconf-query --create -c 'xfce4-session' \
   -p '/general/SaveOnExit' --type 'bool' --set 'false'
 xfconf-query --create -c 'xfce4-session' \
   -p '/general/AutoSave' --type 'bool' --set 'false' # auto save session
+
+#-------------------------------------------------------------------------------
+# Power management
+#-------------------------------------------------------------------------------
+# 0=switch_off_display 1=suspend 2=hibernate 3=lock_screen
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/lid-action-on-ac' --type 'uint' --set '1'
+
+# 0=switch_off_display 1=suspend 2=hibernate 3=lock_screen
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/lid-action-on-battery' --type 'uint' --set '1'
+
+# 0=do_nothing 1=suspend 2=hibernate 3=ask 4=shutdown
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/power-button-action' --type 'uint' --set '1'
+
+# 0=do_nothing 1=suspend 2=hibernate 3=ask 4=shutdown
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/sleep-button-action' --type 'uint' --set '1'
+
+# 0=do_nothing 1=suspend 2=hibernate 3=ask 4=shutdown
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/battery-button-action' --type 'uint' --set '1'
+
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/lock-screen-suspend-hibernate' \
+  --type 'bool' --set 'true'
+
+# Disables logind handling, allowing XFCE to handle the lid switch.
+# It allows a per-user configuration, and avoid conflicts with logind.
+xfconf-query --create -c 'xfce4-power-manager' \
+  -p '/xfce4-power-manager/logind-handle-lid-switch' --type 'bool' --set 'false'
+
+# Configure the session manager to lock the screen on shutdown or restart
+xfconf-query --create -c 'xfce4-session' \
+  -p '/shutdown/LockScreen' --type 'bool' --set 'true'
+
+#-------------------------------------------------------------------------------
+# XFCE 4 Screensaver
+#-------------------------------------------------------------------------------
+# Set the session lock command depending on the available screen locker
+if type -P xfce4-screensaver-command &>/dev/null; then
+  xfconf-query --create -c 'xfce4-session' -p '/general/LockCommand' \
+    -s "xfce4-screensaver-command  -a" --type string
+
+  # Enable Display Power Management Signaling (DPMS) to allow the system to
+  # automatically manage monitor power states
+  xfconf-query --create -c 'xfce4-power-manager' \
+    -p '/xfce4-power-manager/dpms-enabled' --type 'bool' --set 'true'
+
+  # Enables screen locking when the screensaver is activated.
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/lock/enabled' --type 'bool' --set 'true'
+
+  # Enables the screensaver itself, so that it activates after a period of
+  # inactivity.
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/saver/enabled' --type 'bool' --set 'true'
+
+  # Locks the screen on logout, so that if someone logs out, the screen will be
+  # locked and require authentication to access again.
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/lock/logout/enabled' --type 'bool' --set 'true'
+
+  # Allow fullscreen applications to inhibit the screensaver
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/saver/fullscreen-inhibit' --type 'bool' --set 'true'
+
+  # Enable screensaver activation based on user idle time
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/saver/idle-activation/enabled' --type 'bool' --set 'true'
+
+  # Enable screen locking when the screensaver activates
+  xfconf-query --create -c 'xfce4-screensaver' \
+    -p '/lock/saver-activation/enabled' --type 'bool' --set 'true'
+elif type -P light-locker &>/dev/null && type -P dm-tool &>/dev/null; then
+  xfconf-query --create -c 'xfce4-session' -p '/general/LockCommand' \
+    -s "dm-tool lock" --type string
+elif type -P xscreensaver-command &>/dev/null; then
+  xfconf-query -c xfce4-session -p /general/LockCommand \
+    -s "xscreensaver-command -lock" --create -t string
+elif type -P light-locker; then
+  xfconf-query --create -c 'xfce4-session' -p '/general/LockCommand' \
+    -s "light-locker-command -l" --type string
+fi
 
 #-------------------------------------------------------------------------------
 # XFWM 4
