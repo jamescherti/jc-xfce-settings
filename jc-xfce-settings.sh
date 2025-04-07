@@ -1,4 +1,4 @@
-#l!/usr/bin/env bash
+#!/usr/bin/env bash
 #
 # This file is part of the jc-xfce-settings:
 # https://github.com/jamescherti/jc-xfce-settings
