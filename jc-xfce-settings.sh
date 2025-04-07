@@ -59,10 +59,6 @@ xfconf-query --create -c 'xsettings' \
 xfconf-query --create -c 'xfwm4' \
   -p '/general/button_layout' --type 'string' --set '|HC'
 
-# Windows buttons (O=options H=minimize M=maximize C=close)
-# xfconf-query --create -c 'xfwm4' \
-#   -p '/general/button_layout' --type 'string' --set 'O|HMC'
-
 #-------------------------------------------------------------------------------
 # xsettings
 #-------------------------------------------------------------------------------
@@ -81,12 +77,6 @@ xfconf-query --create -c 'xsettings' \
 
 xfconf-query --create -c 'xsettings' \
   -p '/Gtk/CursorThemeSize' --type 'string' --set '32'
-
-# xfconf-query --create -c 'xsettings' \
-#   -p '/Net/ThemeName' --type 'string' --set 'Adwaita-dark'
-
-# xfconf-query --create -c 'xsettings' \
-#   -p '/Net/IconThemeName' --type 'string' --set 'Adwaita'
 
 #-------------------------------------------------------------------------------
 # Thunar
@@ -232,11 +222,6 @@ xfconf-query --create -c 'xfwm4' \
 xfconf-query --create -c 'xfwm4' \
   -p '/general/wrap_windows' --type 'bool' --set 'false'
 
-# xfconf-query --create -c 'xfwm4' \
-#   -p '/general/use_compositing' --type 'bool' --set 'false'
-# xfconf-query --create -c 'xfwm4' \
-#   -p '/general/frame_opacity' --type 'int' --set '0'
-
 # Display full screen overlay windows directly
 xfconf-query --create -c 'xfwm4' \
   -p '/general/unredirect_overlays' --type 'bool' --set 'true'
@@ -273,12 +258,5 @@ xfconf-query --create -c 'xfwm4' \
   -p '/general/cycle_hidden' --type 'bool' --set 'true'
 xfconf-query --create -c 'xfwm4' \
   -p '/general/cycle_draw_frame' --type 'bool' --set 'true'
-
-# xfconf-query --create -c 'xfwm4' -p '/general/theme' --type 'string' --set 'Default'
-# xfconf-query --create -c 'xsettings' -p '/Gtk/DecorationLayout' --type 'string' --set 'close:'
-# xfconf-query --create -c 'xfwm4' -p '/general/button_layout' --type 'string' --set 'C|'
-# xfconf-query --create -c 'xfwm4' -p '/general/placement_ratio' --type 'int' --set '15'
-# xfconf-query --create -c 'xfwm4' \
-#   -p '/general/cycle_tabwin_mode' --type 'int' --set '1' # cycle Windows in a list
 
 echo "Success."
