@@ -332,7 +332,7 @@ xfconf-query --create -c 'xfwm4' \
 
 # Minimum size to trigger smart placement
 xfconf-query --create -c 'xfwm4' \
-  -p '/general/placement_ratio' --type 'int' --set '100'
+  -p '/general/placement_ratio' --type 'int' --set '15'
 
 xfconf-query --create -c 'xfwm4' \
   -p '/general/cycle_hidden' --type 'bool' --set 'true'
