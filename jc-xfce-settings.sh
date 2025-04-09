@@ -331,8 +331,8 @@ xfconf-query --create -c 'xfwm4' \
   -p '/general/zoom_desktop' --type 'bool' --set 'false'
 
 # Minimum size to trigger smart placement
-xfconf-query --create -c 'xfwm4' \
-  -p '/general/placement_ratio' --type 'int' --set '15'
+xfconf-query --create -c 'xfwm4' -p '/general/placement_ratio' \
+  --type 'int' --set '100'
 
 xfconf-query --create -c 'xfwm4' \
   -p '/general/cycle_hidden' --type 'bool' --set 'true'
