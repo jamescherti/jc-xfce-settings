@@ -1,7 +1,7 @@
 # jc-xfce-settings - JC's XFCE Settings
 ![License](https://img.shields.io/github/license/jamescherti/jc-xfce-settings)
 
-This project provides the `jc-xfce-settings.sh` script, which holds James Cherti's settings to customize the XFCE desktop environment, including window management, notifications, desktop behavior, keyboard settings, and more, to enhance the user experience.
+The [jc-xfce-settings](https://github.com/jamescherti/jc-xfce-settings) project provides the jc-xfce-settings.sh script, which holds James Cherti's settings to customize the XFCE desktop environment, including window management, notifications, desktop behavior, keyboard settings, and more, to enhance the user experience.
 
 (The jc-xfce-settings.sh script was created with the help of [watch-xfce-xfconf](https://github.com/jamescherti/watch-xfce-xfconf))
 
