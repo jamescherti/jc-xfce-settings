@@ -5,18 +5,6 @@ The [jc-xfce-settings](https://github.com/jamescherti/jc-xfce-settings) project 
 
 (The jc-xfce-settings.sh script was created with the help of [watch-xfce-xfconf](https://github.com/jamescherti/watch-xfce-xfconf))
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-## Table of Contents
-
-- [jc-xfce-settings - JC's XFCE Settings](#jc-xfce-settings---jcs-xfce-settings)
-  - [Requirements](#requirements)
-  - [Usage](#usage)
-  - [Features](#features)
-  - [Author and License](#author-and-license)
-  - [Links](#links)
-
-<!-- markdown-toc end -->
-
 ## Requirements
 
 - The XFCE Desktop Environment,
