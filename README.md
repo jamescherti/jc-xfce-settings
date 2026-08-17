@@ -12,23 +12,23 @@ The [jc-xfce-settings](https://github.com/jamescherti/jc-xfce-settings) project 
 
 ## Usage
 
-1. Clone the repository:
+Clone the repository:
 
-   ```
-   git clone https://github.com/jamescherti/jc-xfce-settings
-   ```
+```
+git clone https://github.com/jamescherti/jc-xfce-settings
+```
 
-2. Navigate to the repository directory:
+Navigate to the repository directory:
 
-   ```
-   cd jc-xfce-settings
-   ```
+```
+cd jc-xfce-settings
+```
 
-3. Run the script to configure XFCE:
+Run the script to configure XFCE:
 
-   ```
-   ./jc-xfce-settings.sh
-   ```
+```
+./jc-xfce-settings.sh
+```
 
 ## Features
 
