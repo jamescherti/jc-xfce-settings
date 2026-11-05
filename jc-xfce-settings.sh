@@ -46,7 +46,7 @@ error_handler() {
 trap "error_handler" ERR
 set -o errtrace
 
-if ! which xfconf-query >/dev/null 2>&1; then
+if ! which xfconf-query &>/dev/null; then
   echo "Error: the command 'xfconf-query' does not exist." >&2
   exit 1
 fi
